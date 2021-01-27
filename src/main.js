@@ -14,7 +14,7 @@ import '@/icons' // icon
 import '@/permission' // permission control
 import i18n from './lang'
 import FullCalendar from 'vue-full-calendar'
-
+import './mock/index.js'
 Vue.use(FullCalendar)
 Vue.use(ElementUI, { locale })
 Vue.use(ElementUI, {

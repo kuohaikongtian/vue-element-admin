@@ -24,7 +24,8 @@ router.beforeEach((to, from, next) => {
       console.log('from', from)
       console.log('to', to)
       console.log('用户是否已拉取完user_info信息==src==', store.getters.roles.length === 0)
-      if (store.getters.roles.length === 0) { // 判断当前用户是否已拉取完user_info信息
+      const result = store
+      if (result === 0) { // 判断当前用户是否已拉取完user_info信息
         store.dispatch('GetInfo').then(res => { // 拉取user_info
           var roles = store.getters.roles
           console.log(roles)
